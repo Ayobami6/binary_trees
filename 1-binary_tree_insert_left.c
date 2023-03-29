@@ -1,6 +1,5 @@
 #include "binary_trees.h"
 
-
 /**
  * binary_tree_insert_left- insert node to the left
  * @parent: parent node

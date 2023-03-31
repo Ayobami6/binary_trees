@@ -10,9 +10,7 @@
  *
  * Return: If tree is NULL, return 0, else return height.
  */
-size_t binary_tree_balance_and_height(const binary_tree_t
-										  *tree,
-									  int *balance_factor)
+size_t binary_tree_balance_and_height(const binary_tree_t *tree, int *balance_factor)
 {
 	if (!tree)
 	{
@@ -21,10 +19,8 @@ size_t binary_tree_balance_and_height(const binary_tree_t
 	}
 
 	int balance_factor_left = 0, balance_factor_right = 0;
-	size_t height_left = binary_tree_balance_and_height(tree->left,
-														&balance_factor_left);
-	size_t height_right = binary_tree_balance_and_height(
-		tree->right, &balance_factor_right);
+	size_t height_left = binary_tree_balance_and_height(tree->left, &balance_factor_left);
+	size_t height_right = binary_tree_balance_and_height(tree->right, &balance_factor_right);
 
 	*balance_factor = balance_factor_left - balance_factor_right;
 
